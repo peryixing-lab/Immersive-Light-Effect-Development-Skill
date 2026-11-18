@@ -1,7 +1,7 @@
 ---
 name: immersive-light-effect-development
 description: Implements, reviews, debugs, and migrates HarmonyOS Immersive Light (沉浸光感), Spatial UI (空间化), HDS materials, and immersive windows in ArkTS/ArkUI. Use for HdsNavigation, HdsNavDestination, HdsTabs, hdsMaterial, uiMaterial, ImmersiveMaterial, systemMaterial, systemMaterialEffect, MaterialState, ohos.arkui.UIMaterial.state, colorInvert, materialColor, lightEffect, IMMERSIVE_GRADIENT_BLUR, dynamicHideTitleBar, MiniBar, adaptToHandedness (智感握姿), AlphabetIndexer, ChipGroup, SegmentButton, UI Design Kit, 系统材质, 液态玻璃, 背景沉浸, 全屏沉浸, 安全区, 状态栏, 挖孔, 折叠屏, 自由窗口标题栏, ignoreLayoutSafeArea, expandSafeArea, setWindowLayoutFullScreen, setWindowDecorVisible, and getWindowAvoidArea.
-license: MIT
+license: GPL-3.0-only
 ---
 
 # 沉浸光感与窗口沉浸

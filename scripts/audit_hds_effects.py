@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
+# Copyright (c) 2026 peryixing-lab
 """Read-only audit for HarmonyOS HDS and immersive-window implementation."""
 
 from __future__ import annotations
