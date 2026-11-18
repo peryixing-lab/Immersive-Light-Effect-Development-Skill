@@ -13,11 +13,11 @@ HarmonyOS 目前提供两套互补的沉浸光感（Immersive Light）能力体�
 | 能力探测 | `hdsMaterial.getSystemMaterialTypes()` 返回设备支持的材质类型 | `uiMaterial.isImmersiveMaterialSupported()` 检查支持情况，`getGlobalMaterialLevel()` 读取设备等级，`getMaterialInfo()` 读取应用配置 |
 | 材质等级（`MaterialLevel`） | `EXQUISITE`(0 精美) / `GENTLE`(1 轻柔) / `SMOOTH`(2 流畅) / `ADAPTIVE`(10 系统自适应) — **支持主动配置** | `EXQUISITE`(0 高算力) / `GENTLE`(1 中算力) / `SMOOTH`(2 低算力) — **仅只读查询，不支持手动设置，天然自适应** |
 | 材质样式（厚度） | 不提供 `ImmersiveStyle`，由 `materialType` + `materialLevel` 与组件差异化实现共同决定 | `ImmersiveStyle`: `ULTRA_THIN`(0)、`THIN`(1)、`REGULAR`(2)、`THICK`(3)、`ULTRA_THICK`(4)（仅高/中算力生效） |
-| 空间动效 | 由 HDS 组件内部协同系统实现 | 弹窗/菜单（非线性形变 + 边缘流光）、`Slider`（粒子动画），随算力与用户偏好自适应 |
+| 空间动效 | 由 HDS 组件内部协同系统实现 | 弹窗/菜单（非线性形变 + 边缘流光）、`Slider`（粒子动画），随设备算力与系统光感档位自适应 |
 | 平台约束 | 检查 UI Design Kit 和 `SystemCapability.UIDesign.HDSComponent.Core` | 检查项目 SDK 的导出及设备支持。兼容旧版时先用 `deviceInfo.apiAvailable('26.0.0')` 保护新 API |
 
 > [!IMPORTANT]
-> **三档系统偏好与代码编写原则**：用户在系统设置中可选择**强、均衡（默认）、弱**三档沉浸光感。系统底层会自动调节透明度、反色率、折射强度、空间动效和环境交互，**应用无需为三档偏好分别编写三套业务代码**。
+> 系统光感有强、均衡（默认）、弱三档。透明度、反色率、折射、动效和环境交互由系统按档位调节，应用可共用一套材质配置。
 
 ---
 

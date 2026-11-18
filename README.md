@@ -1,6 +1,6 @@
 # HarmonyOS 沉浸光感 Skill
 
-给编码 Agent 使用的 HarmonyOS 开发指南。适合在 ArkTS 工程中实现、排查和审查 HDS 材质、ArkUI 沉浸光感、悬浮底栏与窗口沉浸。内容来自华为官方文档和四个 API 26 工程的实现经验。
+用于在 HarmonyOS ArkTS 工程中接入和排查 HDS 材质、ArkUI 沉浸光感、悬浮底栏与窗口沉浸的 Agent Skill。
 
 - **选对材质接口**。HDS 组件材质从 HarmonyOS 6.1.0（API 23）起支持。标准 ArkUI `uiMaterial` 从 API 26.0.0 起支持，需结合目标 SDK、设备能力和组件生效范围。
 - **处理真实布局**。覆盖滚动标题栏、悬浮 `Tabs`、索引条、深浅色、应用材质开关、手机小窗、折叠屏和自由窗口三键区。
@@ -18,11 +18,11 @@
 npx skills add peryixing-lab/immersive-light-effect-development --skill immersive-light-effect-development --agent claude-code
 ```
 
-加上 `--global` 可安装到 `~/.claude/skills/`。手动安装时，把完整技能目录放入工程的 `.claude/skills/` 或用户级 `~/.claude/skills/`。新会话中可输入 `/immersive-light-effect-development`。 [Claude Code Skills 文档](https://code.claude.com/docs/en/skills)
+加上 `--global` 可安装到 `~/.claude/skills/`。手动安装时，把完整技能目录放入工程的 `.claude/skills/` 或全局 `~/.claude/skills/`。新会话中可输入 `/immersive-light-effect-development`。 [Claude Code Skills 文档](https://code.claude.com/docs/en/skills)
 
 ### DeepSeek Harness
 
-将 Skill 安装到 DeepSeek Harness 的用户级目录，再通过 `dsh` 打开目标工程。以下命令适用于 macOS/Linux。
+将 Skill 安装到 DeepSeek Harness 的全局目录，再通过 `dsh` 打开目标工程。以下命令适用于 macOS/Linux。
 
 ```bash
 dsh_skill_root="${DSH_HOME:-$HOME/.dsh}/skills"
@@ -39,7 +39,7 @@ git clone --depth 1 https://github.com/peryixing-lab/immersive-light-effect-deve
 npx skills add peryixing-lab/immersive-light-effect-development --skill immersive-light-effect-development --agent opencode
 ```
 
-手动安装可以把完整目录放入工程的 `.opencode/skills/`，或用户级 `~/.config/opencode/skills/`。在 OpenCode 新会话里指明技能名称。 [OpenCode Skills 文档](https://opencode.ai/docs/skills/)
+手动安装可以把完整目录放入工程的 `.opencode/skills/`，或全局 `~/.config/opencode/skills/`。在 OpenCode 新会话里指明技能名称。 [OpenCode Skills 文档](https://opencode.ai/docs/skills/)
 
 ### Codex
 
@@ -47,7 +47,7 @@ npx skills add peryixing-lab/immersive-light-effect-development --skill immersiv
 npx skills add peryixing-lab/immersive-light-effect-development --skill immersive-light-effect-development --agent codex
 ```
 
-工程级安装目录是 `.agents/skills/`，用户级目录是 `~/.agents/skills/`。打开目标工程后可用 `$immersive-light-effect-development` 点名。 [Codex Skills 文档](https://developers.openai.com/codex/skills)
+工程级安装目录是 `.agents/skills/`，全局目录是 `~/.agents/skills/`。打开目标工程后可用 `$immersive-light-effect-development` 点名。 [Codex Skills 文档](https://developers.openai.com/codex/skills)
 
 ### 其他 Agent
 

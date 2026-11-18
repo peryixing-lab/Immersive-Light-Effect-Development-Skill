@@ -9,7 +9,7 @@ license: GPL-3.0-only
 ## 选择实现路径
 
 - **HDS 组件材质**适用于 HarmonyOS 6.1.0（API 23）起的 HDS 标题栏按钮和悬浮底部页签。使用 `@kit.UIDesignKit`，在标题栏样式或 `HdsTabs.barFloatingStyle` 中配置 `systemMaterialEffect`。默认选 `MaterialType.ADAPTIVE` 和 `MaterialLevel.ADAPTIVE`。需要指定 `EXQUISITE` 或 `GENTLE` 时，先检查 `getSystemMaterialTypes()` 是否包含 `IMMERSIVE`，否则使用 `SMOOTH` 等级。
-- **ArkUI 系统材质**适用于普通 `Navigation`、`NavDestination`、`Tabs`、弹窗及支持的控件。编译 SDK 须提供相应声明，`targetSdkVersion` 须达到 `26.0.0`。兼容更低版本时，在访问新 API 前使用 `deviceInfo.apiAvailable('26.0.0')`。再用 `uiMaterial.isImmersiveMaterialSupported()` 判断设备支持情况。旧系统或不支持的设备可走单独的标准背景或模糊分支。系统自动处理支持设备的算力等级和用户光感强度。
+- **ArkUI 系统材质**适用于普通 `Navigation`、`NavDestination`、`Tabs`、弹窗及支持的控件。编译 SDK 须提供相应声明，`targetSdkVersion` 须达到 `26.0.0`。兼容更低版本时，在访问新 API 前使用 `deviceInfo.apiAvailable('26.0.0')`。再用 `uiMaterial.isImmersiveMaterialSupported()` 判断设备支持情况。旧系统或不支持的设备可走单独的标准背景或模糊分支。材质效果随设备算力和系统光感档位自适应。
 - **窗口及安全区**适用于背景延伸、内容铺满、系统栏、挖孔和自由窗口。仅延伸背景时优先检查 `.background(...)`，局部沿边绘制用 `.expandSafeArea(...)`，单页内容覆盖避让区用 `.ignoreLayoutSafeArea(...)` 并为交互内容留出可用区域。只有需求涉及窗口所有页面时才使用 `setWindowLayoutFullScreen(true)`。
 
 HDS 和 ArkUI 组件可保留在各自原有的导航结构内。需要同时实现窗口沉浸和材质时，先确定安全区及可交互区域，再选择材质所在的组件。
@@ -18,7 +18,7 @@ HDS 和 ArkUI 组件可保留在各自原有的导航结构内。需要同时实
 
 1. 检查实际构建产品的 `build-profile.json5`、模块 `module.json5`、`oh-package.json5` 和 SDK 类型声明，记录运行平台、SDK 兼容下限和目标版本。定位组件的真实挂载点及状态来源，检查 `entry` 模块中的 `ohos.arkui.UIMaterial.state`。
 2. 对现有项目可运行 `python3 <skill-dir>/scripts/audit_hds_effects.py <project-root>`，使用 `--json` 获取结构化结果。结合实际组件树、产品配置和互斥分支确认每条提示。
-3. 按 [材质接入与排障](references/hds-material.md) 选择专用接口、可见层、样式与降级。复用现有标准 ArkUI 导航、悬浮底栏或桌面工作区时，按 [四项目实战](references/project-patterns.md) 选结构。修改 `.ets` 前加载项目适用的 ArkTS/ArkUI 开发指引。涉及安全区和多设备窗口时读取 [窗口沉浸](references/immersive-window.md)。
+3. 按 [材质接入与排障](references/hds-material.md) 选择专用接口、可见层、样式与降级。复用现有标准 ArkUI 导航、悬浮底栏或桌面工作区时，按 [工程实战](references/project-patterns.md) 选结构。修改 `.ets` 前加载项目适用的 ArkTS/ArkUI 开发指引。涉及安全区和多设备窗口时读取 [窗口沉浸](references/immersive-window.md)。
 4. 按 [验收清单](references/quality-checklist.md) 检查生效范围、降级、可读性和功耗。在项目现有工具链里构建，按目标设备验证滚动、切页、旋转及窗口状态。涉及全屏或系统栏配置时检查离页恢复。交付时记录实际通过的检查和待验证的设备场景。
 
 ## 生效范围与常见故障

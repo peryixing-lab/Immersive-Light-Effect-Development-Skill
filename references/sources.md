@@ -1,6 +1,6 @@
 # 官方来源与版本
 
-2026-11-18 阅读用户提供的九篇官方文档。以下日期采用各原文页面显示的更新时间。遇到同名接口或行为差异时，以实际调用的组件 API、重载及对应 SDK 声明为准。能力范围与默认行为查 ArkUI 专项文档，空间化示例用于理解组合方式。
+以下日期为官方页面标注的更新时间。核对组件能力范围和默认行为时，查阅对应的 ArkUI 指南。字段、重载和版本以目标 SDK 声明为准。
 
 ## HDS 组件与能力探测
 
@@ -43,7 +43,7 @@
 ## 补充 API 核对
 
 - 标准浮栏宽度、底部锚点、蒙层和 `FloatingTabBarStyle.systemMaterial` 的声明。 [Tabs API 参考](https://developer.huawei.com/consumer/cn/doc/doccenter-references/api/ts-container-tabs/#floatingtabbarstyle)
-- 自由窗口标题栏、三键矩形和装饰能力。已核对本机 DevEco Studio 的 HarmonyOS 26.0.0.105 SDK，`@ohos.window.d.ts` 中 `Rect` 使用 px，`TitleButtonRect` 使用 vp。 [自由多窗开发适配](https://developer.huawei.com/consumer/cn/doc/doccenter-capabilities/application-adaptation-freeform-window/) · [窗口沉浸常见问题](https://developer.huawei.com/consumer/cn/doc/harmonyos-faqs/faqs-arkui-1089/)
+- 自由窗口标题栏、三键矩形和装饰能力。HarmonyOS SDK 26.0.0.105 的 `@ohos.window.d.ts` 中 `Rect` 使用 px，`TitleButtonRect` 使用 vp。 [自由多窗开发适配](https://developer.huawei.com/consumer/cn/doc/doccenter-capabilities/application-adaptation-freeform-window/) · [窗口沉浸常见问题](https://developer.huawei.com/consumer/cn/doc/harmonyos-faqs/faqs-arkui-1089/)
 
 ## 工程实践
 
