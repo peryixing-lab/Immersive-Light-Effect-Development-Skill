@@ -1,0 +1,4 @@
+interface:
+  display_name: "Immersive Light Effect development"
+  short_description: "快速实现 HDS 材质、沉浸光感与多设备沉浸式窗口适配"
+  default_prompt: "使用 $immersive-light-effect-development 检查当前 HarmonyOS 项目，并实现可降级的沉浸光感与窗口沉浸效果。"
