@@ -44,7 +44,3 @@
 
 - 标准浮栏宽度、底部锚点、蒙层和 `FloatingTabBarStyle.systemMaterial` 的声明。 [Tabs API 参考](https://developer.huawei.com/consumer/cn/doc/doccenter-references/api/ts-container-tabs/#floatingtabbarstyle)
 - 自由窗口标题栏、三键矩形和装饰能力。HarmonyOS SDK 26.0.0.105 的 `@ohos.window.d.ts` 中 `Rect` 使用 px，`TitleButtonRect` 使用 vp。 [自由多窗开发适配](https://developer.huawei.com/consumer/cn/doc/doccenter-capabilities/application-adaptation-freeform-window/) · [窗口沉浸常见问题](https://developer.huawei.com/consumer/cn/doc/harmonyos-faqs/faqs-arkui-1089/)
-
-## 工程实践
-
-实战要点来自四个使用 HarmonyOS API 26.0.0 的应用，涉及独立标题栏、共享顶栏、侧栏和多窗口工作区。案例中的尺寸和偏移是对应项目的参数。相关实现要点见 [项目实战](project-patterns.md)。

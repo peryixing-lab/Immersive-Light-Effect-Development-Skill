@@ -126,10 +126,10 @@ python3 scripts/audit_hds_effects.py /path/to/harmonyos-project --json
 ## 仓库内容
 
 - [SKILL.md](SKILL.md) 提供接入步骤和按场景加载的参考。
-- [材质接入与排障](references/hds-material.md) 覆盖 HDS、ArkUI、兼容和功耗。
-- [项目实战](references/project-patterns.md) 与 [窗口沉浸](references/immersive-window.md) 覆盖导航、主题、安全区和窗口装饰。
+- [材质接入与排障](references/hds-material.md) 覆盖 HDS、ArkUI、兼容、功耗及导航布局。
+- [窗口沉浸](references/immersive-window.md) 覆盖安全区、浮窗避让和窗口装饰。
 - [验收清单](references/quality-checklist.md) 与 [官方来源](references/sources.md) 用于复测和核对 API。
 
 ## 许可证
 
-仓库中的原创文档和审计脚本采用 [GNU GPL v3.0](LICENSE)（`GPL-3.0-only`）。Copyright © 2026 peryixing-lab。参考的官方文档及第三方示例适用各自的版权和许可。
+仓库中的原创文档和审计脚本采用 [MIT 许可证](LICENSE)。参考的官方文档及第三方示例适用各自的版权和许可。
